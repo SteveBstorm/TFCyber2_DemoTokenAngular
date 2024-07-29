@@ -29,15 +29,15 @@ export class AuthService {
   }
 
   getAllUsers() : Observable<any> {
-    let token = localStorage.getItem("token")
-    let myHeaders = new HttpHeaders({'Authorization' : 'bearer '+token})
-    return this.client.get<any>(this.url + "auth/getusers", {headers : myHeaders})
+    // let token = localStorage.getItem("token")
+    // let myHeaders = new HttpHeaders({'Authorization' : 'bearer '+token})
+    // return this.client.get<any>(this.url + "auth/getusers", {headers : myHeaders})
+    return this.client.get<any>(this.url + "auth/getusers")
   }
 
   getProfile() : Observable<any> {
-    let token = localStorage.getItem("token")
-    let myHeaders = new HttpHeaders({'Authorization' : 'bearer '+token})
-    return this.client.get<any>(this.url + "auth/getprofil", {headers : myHeaders})
+
+    return this.client.get<any>(this.url + "auth/getprofil")
   }
 
   //npm i jwt-decode
